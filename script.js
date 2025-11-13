@@ -32,7 +32,7 @@ function populate(d) {
   document.getElementById('facebook').href = d.facebook;
   document.getElementById('facebook').textContent = d.facebook;
   document.getElementById('contact').textContent = d.contact;
-  document.getElementById('gmail').href = 'mail to:' + d.gmail;
+  document.getElementById('gmail').href = 'mailto:' + d.gmail;
   document.getElementById('gmail').textContent = d.gmail;
 
   // avatar
