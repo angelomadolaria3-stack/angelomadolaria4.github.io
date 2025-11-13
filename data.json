@@ -1,0 +1,69 @@
+{
+  "name": "Angelo Madolaria",
+  "title": "Fullstack Programmer | Designer ",
+  "location": "Maramag, Bukidnon",
+  "facebook": "https://www.facebook.com/share/1KPi6Yt7HD/",
+  "gmail": "madolariaangelo@gmail.com",
+  "contact": "09658398572",
+  "avatar": "avatar.png",
+  "about": " I’m a 3rd-year college student passionate about coding, design, and digital editing. I love creating projects that blend creativity and technology, turning ideas into functional and visually appealing solutions. Always eager to learn and take on new challenges, I aim to make an impact through innovation and design.",
+  "tech": [
+    {
+      "title": "Languages",
+      "items": ["Python", "JavaScript", "HTML/CSS", "C++"]
+    },
+    {
+      "title": "Frameworks & Libraries",
+      "items": ["React", "Node.js", "Django", "Flask"]
+    },
+    {
+      "title": "Database",
+      "items": ["MySQL", "PostgreSQL", "SQLite", "Firebase"]
+    },
+    {
+      "title": "Cloud",
+      "items": ["Firebase", "AWS", "Netlify", "GitHub Pages"]
+    }
+  ],
+  "experience": [
+    {
+      "role": "JavaEclipse / Visual Studio",
+      "company": "Grading System",
+      "years": "POS",
+      "description": "Developed applications using Java and C# in Eclipse/Visual Studio, including a student grading system for automated GWA tracking and a POS system for efficient sales and inventory management."
+    },
+    {
+      "role": "Codings",
+      "company": "Editing",
+      "years": "Programing",
+      "description": "Creating software or applications through writing code. Enhancing and refining digital content like images, videos, or text.."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Web / App Development Skills",
+      "items": ["Mobile app basics (Flutter, React Native, or GlideApps)", "RESTful APIs & integrations"]
+    },
+    {
+      "title": "Design / Editing Skills",
+      "items": ["Graphic Design: Photoshop, Illustrator, Canva", "Video/Content Editing: Premiere Pro, After Effects", "UI/UX design: Figma, Adobe XD"]
+    },
+    {
+      "title": "Soft Skills (Optional but valuable)",
+      "items": ["Problem-solving & logical thinking", "Team collaboration & communication", "Analytical skills & attention to detail", "Time management & project planning"]
+    },
+    {
+      "title": "Tools & Productivity",
+      "items": ["Version Control: Git, GitHub", "Cloud Platforms / Hosting: Firebase, AWS, Netlify"]
+    }
+  ],
+  "education": [
+    {"degree": "Bachelor of Science in  Information Technology", "place":"3rd year", "year":"Students"},
+    {"degree": "Major in Entrepreneurship", "place":"", "year":""}
+  ],
+  "achievements": [
+    "Successfully defended Capstone Project / Thesis Proposal with positive feedback from the panel.",
+    "Achieved high grades in core subjects like Programming, Database Management, or Systems Analysis.",
+    "Consistent Dean’s Lister / Honor Roll for academic excellence."
+  ]
+}

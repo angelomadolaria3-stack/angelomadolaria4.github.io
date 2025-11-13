@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>script.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+script.js</font>
+</center></td></tr></table>
+<pre><span class="s0">// script.js</span>
+<span class="s0">// Loads content from data.json and populates the DOM.</span>
+<span class="s0">// Edit data.json to change the site content.</span>
+
+<span class="s1">async </span><span class="s2">function </span><span class="s1">loadData() {</span>
+  <span class="s2">try </span><span class="s1">{</span>
+    <span class="s1">const res = await fetch(</span><span class="s3">'data.json'</span><span class="s1">);</span>
+    <span class="s1">const data = await res.json();</span>
+    <span class="s1">populate(data);</span>
+  <span class="s1">} </span><span class="s2">catch </span><span class="s1">(err) {</span>
+    <span class="s1">console.error(</span><span class="s3">'Failed to load data.json'</span><span class="s1">, err);</span>
+    <span class="s0">// Fallback: minimal default</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s2">function </span><span class="s1">setText(id, value) {</span>
+  <span class="s1">const el = document.getElementById(id);</span>
+  <span class="s2">if </span><span class="s1">(!el) </span><span class="s2">return</span><span class="s1">;</span>
+  <span class="s2">if </span><span class="s1">(el.tagName === </span><span class="s3">'A'</span><span class="s1">) {</span>
+    <span class="s1">el.href = value;</span>
+    <span class="s1">el.textContent = value;</span>
+  <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+    <span class="s1">el.textContent = value;</span>
+  <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s2">function </span><span class="s1">populate(d) {</span>
+  <span class="s0">// Basic header</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'name'</span><span class="s1">).textContent = d.name;</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'subtitle'</span><span class="s1">).textContent = d.title;</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'location'</span><span class="s1">).textContent = d.location;</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'facebook'</span><span class="s1">).href = d.facebook;</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'facebook'</span><span class="s1">).textContent = d.facebook;</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'contact'</span><span class="s1">).textContent = d.contact;</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'gmail'</span><span class="s1">).href = </span><span class="s3">'mail to:' </span><span class="s1">+ d.gmail;</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'gmail'</span><span class="s1">).textContent = d.gmail;</span>
+
+  <span class="s0">// avatar</span>
+  <span class="s1">const avatar = document.getElementById(</span><span class="s3">'avatar'</span><span class="s1">);</span>
+  <span class="s2">if </span><span class="s1">(d.avatar) avatar.src = d.avatar;</span>
+
+  <span class="s0">// about</span>
+  <span class="s1">document.getElementById(</span><span class="s3">'about'</span><span class="s1">).textContent = d.about;</span>
+
+  <span class="s0">// Tech stack</span>
+  <span class="s1">const techWrap = document.getElementById(</span><span class="s3">'tech-stack'</span><span class="s1">);</span>
+  <span class="s1">techWrap.innerHTML = </span><span class="s3">''</span><span class="s1">;</span>
+  <span class="s1">d.tech.forEach(group =&gt; {</span>
+    <span class="s1">const div = document.createElement(</span><span class="s3">'div'</span><span class="s1">);</span>
+    <span class="s1">div.className = </span><span class="s3">'tech-block'</span><span class="s1">;</span>
+    <span class="s1">const h4 = document.createElement(</span><span class="s3">'h4'</span><span class="s1">);</span>
+    <span class="s1">h4.textContent = group.title;</span>
+    <span class="s1">div.appendChild(h4);</span>
+    <span class="s1">const ul = document.createElement(</span><span class="s3">'ul'</span><span class="s1">);</span>
+    <span class="s1">group.items.forEach(x =&gt; {</span>
+      <span class="s1">const li = document.createElement(</span><span class="s3">'li'</span><span class="s1">);</span>
+      <span class="s1">li.textContent = x;</span>
+      <span class="s1">ul.appendChild(li);</span>
+    <span class="s1">});</span>
+    <span class="s1">div.appendChild(ul);</span>
+    <span class="s1">techWrap.appendChild(div);</span>
+  <span class="s1">});</span>
+
+  <span class="s0">// Experience</span>
+  <span class="s1">const expWrap = document.getElementById(</span><span class="s3">'experience'</span><span class="s1">);</span>
+  <span class="s1">expWrap.innerHTML = </span><span class="s3">''</span><span class="s1">;</span>
+  <span class="s1">d.experience.forEach(e =&gt; {</span>
+    <span class="s1">const item = document.createElement(</span><span class="s3">'div'</span><span class="s1">);</span>
+    <span class="s1">item.className = </span><span class="s3">'exp-item'</span><span class="s1">;</span>
+    <span class="s1">const h4 = document.createElement(</span><span class="s3">'h4'</span><span class="s1">);</span>
+    <span class="s1">h4.textContent = `${e.role} — ${e.company} · ${e.years}`;</span>
+    <span class="s1">const p = document.createElement(</span><span class="s3">'p'</span><span class="s1">);</span>
+    <span class="s1">p.textContent = e.description;</span>
+    <span class="s1">item.appendChild(h4);</span>
+    <span class="s1">item.appendChild(p);</span>
+    <span class="s1">expWrap.appendChild(item);</span>
+  <span class="s1">});</span>
+
+  <span class="s0">// Skills</span>
+  <span class="s1">const skills = document.getElementById(</span><span class="s3">'skills-list'</span><span class="s1">);</span>
+  <span class="s1">skills.innerHTML = </span><span class="s3">''</span><span class="s1">;</span>
+  <span class="s1">d.skills.forEach(sg =&gt; {</span>
+    <span class="s1">const wrapper = document.createElement(</span><span class="s3">'div'</span><span class="s1">);</span>
+    <span class="s1">wrapper.className = </span><span class="s3">'skill-group'</span><span class="s1">;</span>
+    <span class="s1">const h4 = document.createElement(</span><span class="s3">'h4'</span><span class="s1">);</span>
+    <span class="s1">h4.textContent = sg.title;</span>
+    <span class="s1">const ul = document.createElement(</span><span class="s3">'ul'</span><span class="s1">);</span>
+    <span class="s1">sg.items.forEach(it =&gt; {</span>
+      <span class="s1">const li = document.createElement(</span><span class="s3">'li'</span><span class="s1">);</span>
+      <span class="s1">li.textContent = </span><span class="s3">'› ' </span><span class="s1">+ it;</span>
+      <span class="s1">ul.appendChild(li);</span>
+    <span class="s1">});</span>
+    <span class="s1">wrapper.appendChild(h4);</span>
+    <span class="s1">wrapper.appendChild(ul);</span>
+    <span class="s1">skills.appendChild(wrapper);</span>
+  <span class="s1">});</span>
+
+  <span class="s0">// Education</span>
+  <span class="s1">const eduWrap = document.getElementById(</span><span class="s3">'education'</span><span class="s1">);</span>
+  <span class="s1">eduWrap.innerHTML = </span><span class="s3">''</span><span class="s1">;</span>
+  <span class="s1">d.education.forEach(ed =&gt; {</span>
+    <span class="s1">const div = document.createElement(</span><span class="s3">'div'</span><span class="s1">);</span>
+    <span class="s1">div.className = </span><span class="s3">'education-item'</span><span class="s1">;</span>
+    <span class="s1">div.textContent = `${ed.degree} — ${ed.place} · ${ed.year}`;</span>
+    <span class="s1">eduWrap.appendChild(div);</span>
+  <span class="s1">});</span>
+
+  <span class="s0">// Achievements</span>
+  <span class="s1">const achWrap = document.getElementById(</span><span class="s3">'achievements'</span><span class="s1">);</span>
+  <span class="s1">achWrap.innerHTML = </span><span class="s3">''</span><span class="s1">;</span>
+  <span class="s1">d.achievements.forEach(a =&gt; {</span>
+    <span class="s1">const div = document.createElement(</span><span class="s3">'div'</span><span class="s1">);</span>
+    <span class="s1">div.className = </span><span class="s3">'achievement'</span><span class="s1">;</span>
+    <span class="s1">div.textContent = </span><span class="s3">'• ' </span><span class="s1">+ a;</span>
+    <span class="s1">achWrap.appendChild(div);</span>
+  <span class="s1">});</span>
+<span class="s1">}</span>
+
+<span class="s1">loadData();</span>
+</pre>
+</body>
+</html>

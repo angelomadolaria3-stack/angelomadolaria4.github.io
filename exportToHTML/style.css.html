@@ -1,0 +1,302 @@
+<html>
+<head>
+<title>style.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #2aacb8;}
+.s2 { color: #6aab73;}
+.s3 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+style.css</font>
+</center></td></tr></table>
+<pre><span class="s0">:root{</span>
+  <span class="s0">--bg: #</span><span class="s1">071021</span><span class="s0">;</span>
+  <span class="s0">--panel:#</span><span class="s1">0</span><span class="s0">e1a26;</span>
+  <span class="s0">--muted:#</span><span class="s1">98</span><span class="s0">a8bb;</span>
+  <span class="s0">--accent:#</span><span class="s1">60</span><span class="s0">b0ff;</span>
+  <span class="s0">--glass: rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.02</span><span class="s0">);</span>
+  <span class="s0">--card-border: rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.03</span><span class="s0">);</span>
+  <span class="s0">--accent-2: #</span><span class="s1">7</span><span class="s0">FFFD4;</span>
+  <span class="s0">--gap: </span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">font-family: Inter, </span><span class="s2">&quot;Segoe UI&quot;</span><span class="s0">, Roboto, system-ui, -apple-system, </span><span class="s2">&quot;Helvetica Neue&quot;</span><span class="s0">, Arial;</span>
+<span class="s0">}</span>
+
+<span class="s0">*{box-sizing:border-box}</span>
+<span class="s0">html,body{height:</span><span class="s1">100</span><span class="s0">%}</span>
+<span class="s0">body{</span>
+  <span class="s0">margin:</span><span class="s1">0</span><span class="s0">;</span>
+  <span class="s0">background: linear-gradient(</span><span class="s1">180</span><span class="s0">deg,var(--bg) </span><span class="s1">0</span><span class="s0">%, #</span><span class="s1">04101</span><span class="s0">a </span><span class="s1">100</span><span class="s0">%);</span>
+  <span class="s0">color:#dceefc;</span>
+  <span class="s0">-webkit-font-smoothing:antialiased;</span>
+  <span class="s0">-moz-osx-font-smoothing:grayscale;</span>
+  <span class="s0">padding:</span><span class="s1">32</span><span class="s0">px;</span>
+<span class="s0">}</span>
+
+<span class="s0">.container{</span>
+  <span class="s0">max-width:</span><span class="s1">1100</span><span class="s0">px;</span>
+  <span class="s0">margin:</span><span class="s1">0 </span><span class="s0">auto;</span>
+<span class="s0">}</span>
+
+<span class="s0">.top{</span>
+  <span class="s0">display:flex;</span>
+  <span class="s0">gap: var(--gap);</span>
+  <span class="s0">align-items:center;</span>
+  <span class="s0">background: linear-gradient(</span><span class="s1">180</span><span class="s0">deg, rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.015</span><span class="s0">), rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.01</span><span class="s0">));</span>
+  <span class="s0">padding:</span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">border-radius:</span><span class="s1">14</span><span class="s0">px;</span>
+  <span class="s0">border:</span><span class="s1">1</span><span class="s0">px solid var(--card-border);</span>
+  <span class="s0">box-shadow: </span><span class="s1">0 6</span><span class="s0">px </span><span class="s1">20</span><span class="s0">px rgba(</span><span class="s1">1</span><span class="s0">,</span><span class="s1">10</span><span class="s0">,</span><span class="s1">20</span><span class="s0">,</span><span class="s1">0.6</span><span class="s0">);</span>
+<span class="s0">}</span>
+
+<span class="s0">.avatar-wrap{</span>
+  <span class="s0">width:</span><span class="s1">150</span><span class="s0">px;</span>
+  <span class="s0">height:</span><span class="s1">150</span><span class="s0">px;</span>
+  <span class="s0">background: linear-gradient(</span><span class="s1">180</span><span class="s0">deg, rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.01</span><span class="s0">), rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.02</span><span class="s0">));</span>
+  <span class="s0">border-radius:</span><span class="s1">12</span><span class="s0">px;</span>
+  <span class="s0">display:flex;</span>
+  <span class="s0">justify-content:center;</span>
+  <span class="s0">align-items:center;</span>
+  <span class="s0">overflow:hidden;</span>
+  <span class="s0">flex-shrink:</span><span class="s1">0</span><span class="s0">;</span>
+  <span class="s0">border:</span><span class="s1">1</span><span class="s0">px solid rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.04</span><span class="s0">);</span>
+<span class="s0">}</span>
+<span class="s0">.avatar-wrap img{</span>
+  <span class="s0">width:</span><span class="s1">100</span><span class="s0">%;</span>
+  <span class="s0">height:</span><span class="s1">100</span><span class="s0">%;</span>
+  <span class="s0">object-fit:cover;</span>
+  <span class="s0">display:block;</span>
+<span class="s0">}</span>
+
+<span class="s0">.hero{flex:</span><span class="s1">1</span><span class="s0">}</span>
+<span class="s0">h1{</span>
+  <span class="s0">margin:</span><span class="s1">0 0 4</span><span class="s0">px </span><span class="s1">0</span><span class="s0">;</span>
+  <span class="s0">font-size:</span><span class="s1">36</span><span class="s0">px;</span>
+  <span class="s0">letter-spacing:</span><span class="s1">0</span><span class="s0">.</span><span class="s1">8</span><span class="s0">px;</span>
+  <span class="s0">color: #e6f7ff;</span>
+<span class="s0">}</span>
+<span class="s0">.subtitle{</span>
+  <span class="s0">margin:</span><span class="s1">0 0 12</span><span class="s0">px </span><span class="s1">0</span><span class="s0">;</span>
+  <span class="s0">color:var(--muted);</span>
+  <span class="s0">font-weight:</span><span class="s1">500</span><span class="s0">;</span>
+<span class="s0">}</span>
+
+<span class="s0">.contact{</span>
+  <span class="s0">display:flex;</span>
+  <span class="s0">gap:</span><span class="s1">24</span><span class="s0">px;</span>
+  <span class="s0">color:var(--muted);</span>
+  <span class="s0">font-size:</span><span class="s1">14</span><span class="s0">px;</span>
+<span class="s0">}</span>
+<span class="s0">.contact .line{margin:</span><span class="s1">6</span><span class="s0">px </span><span class="s1">0</span><span class="s0">; display:flex; align-items:center; gap:</span><span class="s1">8</span><span class="s0">px}</span>
+<span class="s0">.contact a{color:var(--accent); text-decoration:none}</span>
+<span class="s0">.contact .icon{opacity:</span><span class="s1">0.9</span><span class="s0">; font-size:</span><span class="s1">14</span><span class="s0">px}</span>
+
+<span class="s0">.main-grid{</span>
+  <span class="s0">display:grid;</span>
+  <span class="s0">grid-template-columns: </span><span class="s1">1</span><span class="s0">fr </span><span class="s1">380</span><span class="s0">px;</span>
+  <span class="s0">gap:</span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">margin-top:</span><span class="s1">18</span><span class="s0">px;</span>
+<span class="s0">}</span>
+
+<span class="s0">.panel{</span>
+  <span class="s0">background: var(--panel);</span>
+  <span class="s0">border-radius:</span><span class="s1">12</span><span class="s0">px;</span>
+  <span class="s0">padding:</span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">border:</span><span class="s1">1</span><span class="s0">px solid var(--card-border);</span>
+  <span class="s0">min-height:</span><span class="s1">200</span><span class="s0">px;</span>
+<span class="s0">}</span>
+
+<span class="s3">/* About / left column */</span>
+<span class="s0">.about h2, .skills h2{margin-top:</span><span class="s1">0</span><span class="s0">; color: #bfe7ff}</span>
+<span class="s0">.about p{color:var(--muted); line-height:</span><span class="s1">1.5</span><span class="s0">}</span>
+
+<span class="s0">.tech-grid{</span>
+  <span class="s0">display:grid;</span>
+  <span class="s0">grid-template-columns:repeat(</span><span class="s1">2</span><span class="s0">, </span><span class="s1">1</span><span class="s0">fr);</span>
+  <span class="s0">gap:</span><span class="s1">10</span><span class="s0">px </span><span class="s1">16</span><span class="s0">px;</span>
+  <span class="s0">margin:</span><span class="s1">10</span><span class="s0">px </span><span class="s1">0 18</span><span class="s0">px </span><span class="s1">0</span><span class="s0">;</span>
+<span class="s0">}</span>
+<span class="s0">.tech-block{background:var(--glass); border-radius:</span><span class="s1">8</span><span class="s0">px; padding:</span><span class="s1">10</span><span class="s0">px; border:</span><span class="s1">1</span><span class="s0">px solid rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.02</span><span class="s0">)}</span>
+<span class="s0">.tech-block h4{margin:</span><span class="s1">0 0 6</span><span class="s0">px </span><span class="s1">0</span><span class="s0">; font-size:</span><span class="s1">13</span><span class="s0">px; color:#dff4ff}</span>
+<span class="s0">.tech-block ul{margin:</span><span class="s1">0</span><span class="s0">; padding-left:</span><span class="s1">18</span><span class="s0">px; color:var(--muted); font-size:</span><span class="s1">13</span><span class="s0">px}</span>
+
+<span class="s0">#experience .exp-item{margin-bottom:</span><span class="s1">12</span><span class="s0">px}</span>
+<span class="s0">.exp-item h4{margin:</span><span class="s1">0 0 4</span><span class="s0">px </span><span class="s1">0</span><span class="s0">; color:#eaf9ff}</span>
+<span class="s0">.exp-item p{margin:</span><span class="s1">0</span><span class="s0">; color:var(--muted); font-size:</span><span class="s1">14</span><span class="s0">px}</span>
+
+<span class="s3">/* Right column skills */</span>
+<span class="s0">.skills h2{margin-bottom:</span><span class="s1">8</span><span class="s0">px}</span>
+<span class="s0">#skills-list ul{list-style:none; padding:</span><span class="s1">0</span><span class="s0">; margin:</span><span class="s1">0</span><span class="s0">}</span>
+<span class="s0">.skill-group{margin-bottom:</span><span class="s1">12</span><span class="s0">px}</span>
+<span class="s0">.skill-group h4{margin:</span><span class="s1">0 0 6</span><span class="s0">px </span><span class="s1">0</span><span class="s0">; color:#dff4ff; font-size:</span><span class="s1">14</span><span class="s0">px}</span>
+<span class="s0">.skill-group ul{margin:</span><span class="s1">0</span><span class="s0">; padding-left:</span><span class="s1">18</span><span class="s0">px; color:var(--muted)}</span>
+
+<span class="s0">.education-item, .achievement{margin-bottom:</span><span class="s1">10</span><span class="s0">px; color:var(--muted)}</span>
+
+<span class="s0">.footer{margin-top:</span><span class="s1">18</span><span class="s0">px; text-align:center; color:var(--muted); font-size:</span><span class="s1">13</span><span class="s0">px}</span>
+
+<span class="s3">/* Responsive */</span>
+<span class="s0">@media (max-width:</span><span class="s1">900</span><span class="s0">px){</span>
+  <span class="s0">.main-grid{grid-template-columns:</span><span class="s1">1</span><span class="s0">fr; }</span>
+  <span class="s0">.contact{flex-direction:column}</span>
+  <span class="s0">.avatar-wrap{width:</span><span class="s1">110</span><span class="s0">px;height:</span><span class="s1">110</span><span class="s0">px}</span>
+  <span class="s0">h1{font-size:</span><span class="s1">28</span><span class="s0">px}</span>
+<span class="s0">}</span>
+<span class="s0">:root{</span>
+  <span class="s0">--bg: #</span><span class="s1">071021</span><span class="s0">;</span>
+  <span class="s0">--panel:#</span><span class="s1">0</span><span class="s0">e1a26;</span>
+  <span class="s0">--muted:#</span><span class="s1">98</span><span class="s0">a8bb;</span>
+  <span class="s0">--accent:#</span><span class="s1">60</span><span class="s0">b0ff;</span>
+  <span class="s0">--glass: rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.02</span><span class="s0">);</span>
+  <span class="s0">--card-border: rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.03</span><span class="s0">);</span>
+  <span class="s0">--accent-2: #</span><span class="s1">7</span><span class="s0">FFFD4;</span>
+  <span class="s0">--gap: </span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">font-family: Inter, </span><span class="s2">&quot;Segoe UI&quot;</span><span class="s0">, Roboto, system-ui, -apple-system, </span><span class="s2">&quot;Helvetica Neue&quot;</span><span class="s0">, Arial;</span>
+<span class="s0">}</span>
+
+<span class="s0">*{box-sizing:border-box}</span>
+<span class="s0">html,body{height:</span><span class="s1">100</span><span class="s0">%}</span>
+<span class="s0">body{</span>
+  <span class="s0">margin:</span><span class="s1">0</span><span class="s0">;</span>
+  <span class="s0">background: linear-gradient(</span><span class="s1">180</span><span class="s0">deg,var(--bg) </span><span class="s1">0</span><span class="s0">%, #</span><span class="s1">04101</span><span class="s0">a </span><span class="s1">100</span><span class="s0">%);</span>
+  <span class="s0">color:#dceefc;</span>
+  <span class="s0">-webkit-font-smoothing:antialiased;</span>
+  <span class="s0">-moz-osx-font-smoothing:grayscale;</span>
+  <span class="s0">padding:</span><span class="s1">32</span><span class="s0">px;</span>
+<span class="s0">}</span>
+
+<span class="s0">.container{</span>
+  <span class="s0">max-width:</span><span class="s1">1100</span><span class="s0">px;</span>
+  <span class="s0">margin:</span><span class="s1">0 </span><span class="s0">auto;</span>
+<span class="s0">}</span>
+
+<span class="s0">.top{</span>
+  <span class="s0">display:flex;</span>
+  <span class="s0">gap: var(--gap);</span>
+  <span class="s0">align-items:center;</span>
+  <span class="s0">background: linear-gradient(</span><span class="s1">180</span><span class="s0">deg, rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.015</span><span class="s0">), rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.01</span><span class="s0">));</span>
+  <span class="s0">padding:</span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">border-radius:</span><span class="s1">14</span><span class="s0">px;</span>
+  <span class="s0">border:</span><span class="s1">1</span><span class="s0">px solid var(--card-border);</span>
+  <span class="s0">box-shadow: </span><span class="s1">0 6</span><span class="s0">px </span><span class="s1">20</span><span class="s0">px rgba(</span><span class="s1">1</span><span class="s0">,</span><span class="s1">10</span><span class="s0">,</span><span class="s1">20</span><span class="s0">,</span><span class="s1">0.6</span><span class="s0">);</span>
+<span class="s0">}</span>
+
+<span class="s0">.avatar-wrap{</span>
+  <span class="s0">width:</span><span class="s1">150</span><span class="s0">px;</span>
+  <span class="s0">height:</span><span class="s1">150</span><span class="s0">px;</span>
+  <span class="s0">background: linear-gradient(</span><span class="s1">180</span><span class="s0">deg, rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.01</span><span class="s0">), rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.02</span><span class="s0">));</span>
+  <span class="s0">border-radius:</span><span class="s1">12</span><span class="s0">px;</span>
+  <span class="s0">display:flex;</span>
+  <span class="s0">justify-content:center;</span>
+  <span class="s0">align-items:center;</span>
+  <span class="s0">overflow:hidden;</span>
+  <span class="s0">flex-shrink:</span><span class="s1">0</span><span class="s0">;</span>
+  <span class="s0">border:</span><span class="s1">1</span><span class="s0">px solid rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.04</span><span class="s0">);</span>
+<span class="s0">}</span>
+<span class="s0">.avatar-wrap img{</span>
+  <span class="s0">width:</span><span class="s1">100</span><span class="s0">%;</span>
+  <span class="s0">height:</span><span class="s1">100</span><span class="s0">%;</span>
+  <span class="s0">object-fit:cover;</span>
+  <span class="s0">display:block;</span>
+<span class="s0">}</span>
+
+<span class="s0">.hero{flex:</span><span class="s1">1</span><span class="s0">}</span>
+<span class="s0">h1{</span>
+  <span class="s0">margin:</span><span class="s1">0 0 4</span><span class="s0">px </span><span class="s1">0</span><span class="s0">;</span>
+  <span class="s0">font-size:</span><span class="s1">36</span><span class="s0">px;</span>
+  <span class="s0">letter-spacing:</span><span class="s1">0</span><span class="s0">.</span><span class="s1">8</span><span class="s0">px;</span>
+  <span class="s0">color: #e6f7ff;</span>
+<span class="s0">}</span>
+<span class="s0">.subtitle{</span>
+  <span class="s0">margin:</span><span class="s1">0 0 12</span><span class="s0">px </span><span class="s1">0</span><span class="s0">;</span>
+  <span class="s0">color:var(--muted);</span>
+  <span class="s0">font-weight:</span><span class="s1">500</span><span class="s0">;</span>
+<span class="s0">}</span>
+
+<span class="s0">.contact{</span>
+  <span class="s0">display:flex;</span>
+  <span class="s0">gap:</span><span class="s1">24</span><span class="s0">px;</span>
+  <span class="s0">color:var(--muted);</span>
+  <span class="s0">font-size:</span><span class="s1">14</span><span class="s0">px;</span>
+<span class="s0">}</span>
+<span class="s0">.contact .line{margin:</span><span class="s1">6</span><span class="s0">px </span><span class="s1">0</span><span class="s0">; display:flex; align-items:center; gap:</span><span class="s1">8</span><span class="s0">px}</span>
+<span class="s0">.contact a{color:var(--accent); text-decoration:none}</span>
+<span class="s0">.contact .icon{opacity:</span><span class="s1">0.9</span><span class="s0">; font-size:</span><span class="s1">14</span><span class="s0">px}</span>
+
+<span class="s0">.main-grid{</span>
+  <span class="s0">display:grid;</span>
+  <span class="s0">grid-template-columns: </span><span class="s1">1</span><span class="s0">fr </span><span class="s1">380</span><span class="s0">px;</span>
+  <span class="s0">gap:</span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">margin-top:</span><span class="s1">18</span><span class="s0">px;</span>
+<span class="s0">}</span>
+
+<span class="s0">.panel{</span>
+  <span class="s0">background: var(--panel);</span>
+  <span class="s0">border-radius:</span><span class="s1">12</span><span class="s0">px;</span>
+  <span class="s0">padding:</span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">border:</span><span class="s1">1</span><span class="s0">px solid var(--card-border);</span>
+  <span class="s0">min-height:</span><span class="s1">200</span><span class="s0">px;</span>
+<span class="s0">}</span>
+
+<span class="s3">/* About / left column */</span>
+<span class="s0">.about h2, .skills h2{margin-top:</span><span class="s1">0</span><span class="s0">; color: #bfe7ff}</span>
+<span class="s0">.about p{color:var(--muted); line-height:</span><span class="s1">1.5</span><span class="s0">}</span>
+
+<span class="s0">.tech-grid{</span>
+  <span class="s0">display:grid;</span>
+  <span class="s0">grid-template-columns:repeat(</span><span class="s1">2</span><span class="s0">, </span><span class="s1">1</span><span class="s0">fr);</span>
+  <span class="s0">gap:</span><span class="s1">10</span><span class="s0">px </span><span class="s1">16</span><span class="s0">px;</span>
+  <span class="s0">margin:</span><span class="s1">10</span><span class="s0">px </span><span class="s1">0 18</span><span class="s0">px </span><span class="s1">0</span><span class="s0">;</span>
+<span class="s0">}</span>
+<span class="s0">.tech-block{background:var(--glass); border-radius:</span><span class="s1">8</span><span class="s0">px; padding:</span><span class="s1">10</span><span class="s0">px; border:</span><span class="s1">1</span><span class="s0">px solid rgba(</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">255</span><span class="s0">,</span><span class="s1">0.02</span><span class="s0">)}</span>
+<span class="s0">.tech-block h4{margin:</span><span class="s1">0 0 6</span><span class="s0">px </span><span class="s1">0</span><span class="s0">; font-size:</span><span class="s1">13</span><span class="s0">px; color:#dff4ff}</span>
+<span class="s0">.tech-block ul{margin:</span><span class="s1">0</span><span class="s0">; padding-left:</span><span class="s1">18</span><span class="s0">px; color:var(--muted); font-size:</span><span class="s1">13</span><span class="s0">px}</span>
+
+<span class="s0">#experience .exp-item{margin-bottom:</span><span class="s1">12</span><span class="s0">px}</span>
+<span class="s0">.exp-item h4{margin:</span><span class="s1">0 0 4</span><span class="s0">px </span><span class="s1">0</span><span class="s0">; color:#eaf9ff}</span>
+<span class="s0">.exp-item p{margin:</span><span class="s1">0</span><span class="s0">; color:var(--muted); font-size:</span><span class="s1">14</span><span class="s0">px}</span>
+
+<span class="s3">/* Right column skills */</span>
+<span class="s0">.skills h2{margin-bottom:</span><span class="s1">8</span><span class="s0">px}</span>
+<span class="s0">#skills-list ul{list-style:none; padding:</span><span class="s1">0</span><span class="s0">; margin:</span><span class="s1">0</span><span class="s0">}</span>
+<span class="s0">.skill-group{margin-bottom:</span><span class="s1">12</span><span class="s0">px}</span>
+<span class="s0">.skill-group h4{margin:</span><span class="s1">0 0 6</span><span class="s0">px </span><span class="s1">0</span><span class="s0">; color:#dff4ff; font-size:</span><span class="s1">14</span><span class="s0">px}</span>
+<span class="s0">.skill-group ul{margin:</span><span class="s1">0</span><span class="s0">; padding-left:</span><span class="s1">18</span><span class="s0">px; color:var(--muted)}</span>
+
+<span class="s0">.education-item, .achievement{margin-bottom:</span><span class="s1">10</span><span class="s0">px; color:var(--muted)}</span>
+
+<span class="s0">.footer{margin-top:</span><span class="s1">18</span><span class="s0">px; text-align:center; color:var(--muted); font-size:</span><span class="s1">13</span><span class="s0">px}</span>
+
+<span class="s3">/* Responsive */</span>
+<span class="s0">@media (max-width:</span><span class="s1">900</span><span class="s0">px){</span>
+  <span class="s0">.main-grid{grid-template-columns:</span><span class="s1">1</span><span class="s0">fr; }</span>
+  <span class="s0">.contact{flex-direction:column}</span>
+  <span class="s0">.avatar-wrap{width:</span><span class="s1">110</span><span class="s0">px;height:</span><span class="s1">110</span><span class="s0">px}</span>
+  <span class="s0">h1{font-size:</span><span class="s1">28</span><span class="s0">px}</span>
+<span class="s0">}</span>
+<span class="s0">.resume-btn {</span>
+  <span class="s0">margin-top: </span><span class="s1">10</span><span class="s0">px;</span>
+<span class="s0">}</span>
+
+<span class="s0">.resume-btn a {</span>
+  <span class="s0">display: inline-block;</span>
+  <span class="s0">padding: </span><span class="s1">10</span><span class="s0">px </span><span class="s1">18</span><span class="s0">px;</span>
+  <span class="s0">background-color: #</span><span class="s1">007</span><span class="s0">bff;</span>
+  <span class="s0">color: #fff;</span>
+  <span class="s0">border-radius: </span><span class="s1">8</span><span class="s0">px;</span>
+  <span class="s0">text-decoration: none;</span>
+  <span class="s0">font-weight: </span><span class="s1">500</span><span class="s0">;</span>
+  <span class="s0">transition: </span><span class="s1">0</span><span class="s0">.</span><span class="s1">2</span><span class="s0">s;</span>
+<span class="s0">}</span>
+
+<span class="s0">.resume-btn a:hover {</span>
+  <span class="s0">background-color: #</span><span class="s1">3399</span><span class="s0">ff;</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>
